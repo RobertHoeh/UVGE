@@ -6,7 +6,6 @@ import engine.EngineTemplate
 import engine.NeedsNVG
 import engine.NeedsWindow
 import org.lwjgl.nanovg.NanoVG.*
-import org.lwjgl.nanovg.NanoVGGL3.*
 
 class TextRenderer(
     val fonts: Array<FontInfo>,
