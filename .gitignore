@@ -44,3 +44,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 /.junie/memory/errors.md
+/.junie
+/.idea
+*.log
