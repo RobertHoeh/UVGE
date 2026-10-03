@@ -1,11 +1,11 @@
 package engine.components
 
-import components.Bezier
+import components.shapes.Drawable
 import engine.EngineTemplate
 import engine.NeedsNVG
 import engine.NeedsWindow
 
-class ShapeRenderer(var curves: MutableList<Bezier>) : EngineTemplate, NeedsWindow, NeedsNVG {
+class ShapeRenderer(var curves: MutableList<Drawable>) : EngineTemplate, NeedsWindow, NeedsNVG {
     constructor() : this(mutableListOf())
 
     override var window: Long? = null

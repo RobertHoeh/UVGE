@@ -1,17 +1,20 @@
-package components
+package components.shapes
 
+import components.Vec2
+import components.toNVGColor
 import org.lwjgl.nanovg.NanoVG.*
 import org.lwjgl.system.MemoryStack.stackPush
 import java.awt.Color
 
-data class Bezier(val start: Vec2,
-                  val a: Vec2,
-                  val b: Vec2,
-                  val end: Vec2,
-                  val color: Color = Color.BLACK,
-                  val width: Float = 1f
-) {
-    fun draw(vg: Long) {
+data class Bezier(
+    override val start: Vec2 = Vec2(0,0),
+    val a: Vec2,
+    val b: Vec2,
+    override val end: Vec2,
+    val color: Color = Color.BLACK,
+    val width: Float = 1f
+) : Drawable, LineLike {
+    override fun draw(vg: Long) {
         nvgBeginPath(vg)
 
         nvgMoveTo(vg, start.x, start.y)
