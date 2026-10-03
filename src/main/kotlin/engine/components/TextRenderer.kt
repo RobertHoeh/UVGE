@@ -14,7 +14,7 @@ class TextRenderer(
     constructor(fonts: Array<FontInfo>) : this(fonts, mutableListOf())
 
     constructor(textComponents: MutableList<TextComponent>) : this(
-        arrayOf(FontInfo("Roboto", "resources/fonts/Roboto-Regular.ttf")),
+        arrayOf(FontInfo("Roboto", "src/main/resources/fonts/Roboto-Regular.ttf")),
         textComponents
     )
 
