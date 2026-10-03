@@ -7,7 +7,7 @@ import org.lwjgl.system.MemoryStack.stackPush
 import java.awt.Color
 
 data class Line (
-    override val start : Vec2 = Vec2(0, 0),
+    override val start : Vec2,
     override val end : Vec2,
     val color : Color = Color.BLACK,
     val width : Float = 1f,

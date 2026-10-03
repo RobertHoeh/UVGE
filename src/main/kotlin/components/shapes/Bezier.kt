@@ -7,7 +7,7 @@ import org.lwjgl.system.MemoryStack.stackPush
 import java.awt.Color
 
 data class Bezier(
-    override val start: Vec2 = Vec2(0,0),
+    override val start: Vec2,
     val a: Vec2,
     val b: Vec2,
     override val end: Vec2,
