@@ -2,9 +2,10 @@ package engine
 
 import engine.components.Core
 import org.lwjgl.glfw.GLFW.glfwWindowShouldClose
+import java.awt.Color
 
-class Engine(val renderers: Array<EngineTemplate>) : EngineTemplate {
-    val core = Core()
+class Engine(val renderers: Array<EngineTemplate>, clearColor: Color = Color.RED) : EngineTemplate {
+    val core = Core(clearColor)
 
     var window: Long? = 0
     var vg: Long = 0

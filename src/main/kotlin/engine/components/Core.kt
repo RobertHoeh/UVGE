@@ -11,8 +11,9 @@ import org.lwjgl.opengl.GL
 import org.lwjgl.opengl.GL11.*
 import org.lwjgl.system.MemoryStack.stackPush
 import org.lwjgl.system.MemoryUtil.NULL
+import java.awt.Color
 
-open class Core : EngineTemplate {
+open class Core (val clearColor: Color = Color.RED) : EngineTemplate {
     companion object {
         var WINDOW_SIZE = Pair(800, 600)
     }
@@ -82,7 +83,12 @@ open class Core : EngineTemplate {
 
         glfwSwapInterval(1)
         glfwShowWindow(window!!)
-        glClearColor(1.0f, 0.0f, 0.0f, 0.0f)
+        glClearColor(
+            clearColor.red.toFloat() / 255f,
+            clearColor.green.toFloat() / 255f,
+            clearColor.blue.toFloat() / 255f,
+            clearColor.alpha.toFloat() / 255f
+        )
     }
 
     fun beginFrame() {
