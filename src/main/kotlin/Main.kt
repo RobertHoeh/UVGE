@@ -30,7 +30,8 @@ fun main() {
         ),
         ShapeRenderer(
             mutableListOf(
-                SVGImage(shapeData,
+                SVGImage(
+                    shapeData,
                     Color.BLACK
                 )
             )

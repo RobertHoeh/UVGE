@@ -18,7 +18,7 @@ import org.lwjgl.system.MemoryStack
  * that size and centered in the viewport, so the path's own units don't matter.
  * Set [flipY] for y-up sources such as potrace output.
  */
-class SVGImage(
+open class SVGImage(
     pathData: String,
     val fill: Color = Color.BLACK,
     val width: Float? = null,
